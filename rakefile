@@ -1,0 +1,16 @@
+task default: [:setup]
+
+task :setup do
+    system 'sudo rm -r .git'
+    system 'git init'
+    system 'nano .gems'
+    system 'mv default.rvmrc .rvmrc'
+    system 'nano .rvmrc'
+    system 'rvm reload'
+    system 'rvm gemset import'
+    system 'nano README.md'
+    system 'nano TODO.md'
+    system 'echo "\n.sass-cache/\ndb/" >> .git/info/exclude'
+    system 'git add . && git commit -m "Initial commit."'
+    system 'rm rakefile'
+end
