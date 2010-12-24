@@ -19,7 +19,7 @@ end
 
 
 get '/' do
-    @view = {title: '', author: author, created: created}
+    @view = {title: 'Learn You The Web For Everlasting Life', author: author, created: created}
     haml :index
 end
 

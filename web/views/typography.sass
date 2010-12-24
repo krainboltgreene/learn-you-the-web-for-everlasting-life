@@ -8,7 +8,14 @@ a
     @include fade-out
 // Header Styles
 #header
-    
+    & h1
+        &#title
+            @include outline
+            @include center
+            @include serif-font('UnifrakturMaguntia')
+            font-size: 128px
+            @include text-shadow
+                
 // Content Styles
 #content
     & #chrome, #firefox, #opera
